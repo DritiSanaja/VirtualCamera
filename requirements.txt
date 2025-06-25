@@ -1,0 +1,9 @@
+numpy==1.23.5
+opencv-python==4.7.0.72
+pyvirtualcam==0.10.2
+pillow==9.4.0
+matplotlib==3.7.1
+numba==0.56.4
+moviepy==1.0.3
+keyboard==0.13.5
+mediapipe==0.10.21
