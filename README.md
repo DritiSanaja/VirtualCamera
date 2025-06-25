@@ -73,14 +73,20 @@ python run.py
 ### Motion Detection Script
 Run the motion detection script:
 ```bash
-python g.py
+python motion_tracker.py
 ```
 
+#### Motion Detection Controls
+- **'q'** - Quit motion detection
+- **'s'** - Save motion log to file
+- **'r'** - Reset reference frame
+
 This script will:
-- Detect motion in the video stream
-- Draw bounding boxes around moving objects
+- Detect motion in the video stream using background subtraction
+- Draw green bounding boxes around moving objects (>5000 pixels)
 - Log timestamps of motion start/stop events
 - Display multiple processing stages (gray, delta, threshold, color frames)
+- Generate motion summary and save log file
 
 ## File Structure
 
@@ -94,7 +100,7 @@ VirtualCamera/
 ├── overlays.py            # Histogram visualization and text overlay functions
 ├── capturing.py           # Camera capture and virtual camera setup
 ├── run.py                 # Main application entry point
-├── g.py                   # Motion detection script
+├── motion_tracker.py      # Motion detection script
 ├── requirements.txt       # Python dependencies
 ├── README.md             # This file
 └── images/               # Replacement images (dog.png, trump.jpg, musk.jpg, sea.jpg)
